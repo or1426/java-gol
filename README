@@ -4,7 +4,7 @@ Bear in mind that javac will make a load of .class files so put it in a director
 Put the saved patterns wherever you like and just use the open window inside the program to navigate to them. It is probably a good idea to keep them all
 in the same place so you don't forget where they are!
 
-This works well for what it is. The number of cells is limited by screen resolution (each cell is 5 pixels by 5 pixels) which is not great.
+It works well for what it is. The number of cells is limited by screen resolution (each cell is 5 pixels by 5 pixels) which is not great.
 
 The format for the saved patterns is:
 
@@ -13,6 +13,9 @@ number of cells in y direction
 number of living cells to start with
 x position of first living cell
 y position of first living cell
+x position of second living cell
+y position of second living cell
+.
 .
 .
 .
@@ -33,6 +36,13 @@ So to save a "blinker" in a 5 by 5 grid we might have a file that looks like thi
 2
 3
 
+If we ASCII art this up and say O is dead and X is living we will get a screen that looks like this:
+
+OOOOO
+OOXOO
+OOXOO
+OOXOO
+OOOOO
 
 Bear in mind that with a grid this small the buttons and slider will be so small they are basically unuseable if you can't remember which button is which!
 
