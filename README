@@ -1,3 +1,9 @@
+To run the program just put the file Conway.java in a directory, type javac Conway.java to compile it and java Conway (with no extension) to run it. 
+Bear in mind that javac will make a load of .class files so put it in a directory you don't mind getting cluttered!
+
+Put the saved patterns wherever you like and just use the open window inside the program to navigate to them. It is probably a good idea to keep them all
+in the same place so you don't forget where they are!
+
 This works well for what it is. The number of cells is limited by screen resolution (each cell is 5 pixels by 5 pixels) which is not great.
 
 The format for the saved patterns is:
@@ -29,3 +35,5 @@ So to save a "blinker" in a 5 by 5 grid we might have a file that looks like thi
 
 
 Bear in mind that with a grid this small the buttons and slider will be so small they are basically unuseable if you can't remember which button is which!
+
+(Having a given size for the window and changing the size of the cells to match it might be a good idea!)
