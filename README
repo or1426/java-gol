@@ -1,0 +1,31 @@
+This works well for what it is. The number of cells is limited by screen resolution (each cell is 5 pixels by 5 pixels) which is not great.
+
+The format for the saved patterns is:
+
+number of cells in x direction
+number of cells in y direction
+number of living cells to start with
+x position of first living cell
+y position of first living cell
+.
+.
+.
+.
+.
+x position of last living cell
+y position of last living cell
+
+So to save a "blinker" in a 5 by 5 grid we might have a file that looks like this:
+
+5
+5
+3
+2
+1
+2
+2
+2
+3
+
+
+Bear in mind that with a grid this small the buttons and slider will be so small they are basically unuseable if you can't remember which button is which!
