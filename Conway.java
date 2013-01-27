@@ -147,7 +147,7 @@ public class Conway {
 
             Label.setBounds(0, 0, 310, 230);
 
-            Label.setText("<html>Click on the blue area to set change the <br>state of squares blue squares are \"dead\" whilst red ones are \"living\". <br>"
+            Label.setText("<html>Click on the blue area to set change the <br>state of squares white squares are \"dead\" whilst black ones are \"living\". <br>"
                     + "<br>Use the slider to change the speed."
                     + "<br>"
                     + "<br>If a living cell has more than 3 or fewer than 2 living neighbours it dies next tick"
@@ -215,7 +215,7 @@ public class Conway {
 
                     for (int i = 0; i < JLArray.length; ++i) {
                         for (int j = 0; j < JLArray[i].length; ++j) {
-                            env.setSquare(i, j, (JLArray[i][j].getBackground() == Color.RED));
+                            env.setSquare(i, j, (JLArray[i][j].getBackground() == Color.black));
                         }
                     }
                     Thread Th = new Thread() {
@@ -257,9 +257,9 @@ public class Conway {
                     for (int i = 0; i < JL.length; ++i) {
                         for (int j = 0; j < JL[i].length; ++j) {
                             if (e.getSquare(i, j)) {
-                                JL[i][j].setBackground(Color.red);
+                                JL[i][j].setBackground(Color.black);
                             } else {
-                                JL[i][j].setBackground(Color.BLUE);
+                                JL[i][j].setBackground(Color.white);
                             }
                         }
                     }
@@ -275,10 +275,10 @@ public class Conway {
             @Override
             public void mousePressed(MouseEvent me) {
                 if (!started) {
-                    if (((JLabel) me.getSource()).getBackground() == Color.BLUE) {
-                        ((JLabel) me.getSource()).setBackground(Color.RED);
+                    if (((JLabel) me.getSource()).getBackground() == Color.white) {
+                        ((JLabel) me.getSource()).setBackground(Color.black);
                     } else {
-                        ((JLabel) me.getSource()).setBackground(Color.BLUE);
+                        ((JLabel) me.getSource()).setBackground(Color.white);
                     }
                 }
             }
@@ -321,7 +321,7 @@ public class Conway {
                         int num = 0;
                         for (int i = 0; i < J.length; ++i) {
                             for (int j = 0; j < J[i].length; ++j) {
-                                if (J[i][j].getBackground() == Color.red) {
+                                if (J[i][j].getBackground() == Color.black) {
                                     ++num;
 
                                 }
@@ -330,7 +330,7 @@ public class Conway {
                         out.println(Integer.toString(num));
                         for (int i = 0; i < J.length; ++i) {
                             for (int j = 0; j < J[i].length; ++j) {
-                                if (J[i][j].getBackground() == Color.RED) {
+                                if (J[i][j].getBackground() == Color.black) {
                                     out.println(Integer.toString(i));
                                     out.println(Integer.toString(j));
                                 }
@@ -404,8 +404,8 @@ public class Conway {
                     JLArray[i][j] = new JLabel();
                     JLArray[i][j].setOpaque(true);
                     JLArray[i][j].setBounds(10 * i, (10 * j) + 100, 10, 10);
-                    JLArray[i][j].setBackground(Color.BLUE);
-                    JLArray[i][j].setBorder(BorderFactory.createLineBorder(Color.BLUE));
+                    JLArray[i][j].setBackground(Color.white);
+                    JLArray[i][j].setBorder(BorderFactory.createLineBorder(Color.white));
                     JLArray[i][j].addMouseListener(llistener);
                     p.add(JLArray[i][j]);
                 }
